@@ -1,0 +1,27 @@
+{
+  "name": "nightrun",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack"
+  },
+  "main": "build/project.bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vesuvium/nightrun.git"
+  },
+  "author": "Jacopo Cascioli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vesuvium/nightrun/issues"
+  },
+  "homepage": "https://github.com/vesuvium/nightrun#readme",
+  "dependencies": {
+    "phaser": "^3.11.0"
+  },
+  "devDependencies": {
+    "raw-loader": "^0.5.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}
