@@ -5,4 +5,4 @@ import Sprite from './Sprite.js';
 import LoadingBar from './ui/LoadingBar.js';
 import Text from './ui/Text.js';
 
-export default { Item, Monster, LoadingBar, Scene, Sprite, Text };
+export { Item, Monster, LoadingBar, Scene, Sprite, Text };
