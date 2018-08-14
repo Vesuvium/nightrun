@@ -1,5 +1,6 @@
 import analyze from 'rollup-analyzer-plugin';
 import buble from 'rollup-plugin-buble';
+import eslint from 'rollup-plugin-eslint';
 import resolve from 'rollup-plugin-node-resolve';
 
 
@@ -16,6 +17,7 @@ const config = [
             'phaser'
         ],
         plugins: [
+            eslint.eslint(),
             resolve({
                 customResolveOptions: {
                     moduleDirectory: 'src'
