@@ -1,3 +1,4 @@
+import analyze from 'rollup-analyzer-plugin';
 import buble from 'rollup-plugin-buble';
 import resolve from 'rollup-plugin-node-resolve';
 
@@ -20,7 +21,8 @@ const config = [
                     moduleDirectory: 'src'
                 }
             }),
-            buble()
+            buble(),
+            analyze({limit: 2})
         ]
     }
 ];
