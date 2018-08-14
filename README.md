@@ -81,7 +81,7 @@ const sprite = new Sprite(this, 'sword', {frameWidth: 16, frameHeight: 16}, {phy
 
 ### Monster
 
-Inherits from Sprite, assumes physiscs is enabled.
+Inherits from Sprite, assumes physics is enabled.
 
 ```js
 const monster = new Monster(this, 'spider', {hp: 1, attack: 1});
