@@ -3,9 +3,9 @@
   "version": "0.1.1",
   "description": "",
   "scripts": {
-    "build": "webpack"
+    "build": "rollup -c"
   },
-  "main": "build/project.bundle.js",
+  "main": "dist/nightrun.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vesuvium/nightrun.git"
@@ -20,8 +20,9 @@
     "phaser": "^3.11.0"
   },
   "devDependencies": {
-    "raw-loader": "^0.5.1",
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "rollup": "^0.64.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-commonjs": "^9.1.5",
+    "rollup-plugin-node-resolve": "^3.3.0"
   }
 }
