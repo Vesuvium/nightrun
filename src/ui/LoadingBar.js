@@ -1,4 +1,4 @@
-import Text from './Text.js';
+import Text from './Text';
 
 
 class LoadingBar {
@@ -11,7 +11,7 @@ class LoadingBar {
         const width = this.game.cameras.main.width;
         const halfWidth = width / 2;
         const height = this.game.cameras.main.height;
-        const style = {font: '18px monospace', fill: '#ffffff'};
+        const style = { font: '18px monospace', fill: '#ffffff' };
         this.box = this.game.add.graphics();
         this.box.fillStyle(0x222222, 0.8);
         this.box.fillRect(240, 270, 320, 50);
@@ -32,16 +32,16 @@ class LoadingBar {
             this.bar.fillRect(250, 280, 300 * value, 30);
             const percentage = parseInt(value * 100);
             this.percentage.write(`${percentage}%`);
-        }
+        };
     }
 
     complete() {
-        return (value) => {
+        return () => {
             this.bar.destroy();
             this.box.destroy();
             this.percentage.destroy();
             this.loadingText.destroy();
-        }
+        };
     }
 }
 
