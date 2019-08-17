@@ -1,5 +1,4 @@
 class Text {
-
     constructor(phaser, text, x, y, style, options) {
         this.phaser = phaser;
         this.create(text, x, y, style, options);
