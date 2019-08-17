@@ -9,7 +9,7 @@ class Item {
 
     setSpawn(x, y) {
         /* Sets the spawn point of the item */
-        this.spawn = {x: x, y: y};
+        this.spawn = { x, y };
     }
 
     creationContext() {
@@ -35,7 +35,6 @@ class Item {
         const y = this.spawn.y;
         this.item = context.add.image(x, y, this.name);
         this.item.name = this.name;
-        //this.item.setData('x', 'magic');
     }
 }
 
