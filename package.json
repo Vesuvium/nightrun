@@ -3,7 +3,8 @@
   "version": "0.1.2",
   "description": "",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "ava"
   },
   "main": "dist/nightrun.js",
   "repository": {
@@ -20,14 +21,24 @@
     "phaser": "^3.11.0"
   },
   "devDependencies": {
+    "ava": "^2.2.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "esm": "^3.2.25",
     "rollup": "^0.64.1",
     "rollup-plugin-analyzer": "^3.1.2",
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-commonjs": "^9.1.5",
     "rollup-plugin-eslint": "^5.0.0",
     "rollup-plugin-node-resolve": "^3.3.0"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*"
+    ],
+    "require": [
+      "esm"
+    ]
   }
 }
