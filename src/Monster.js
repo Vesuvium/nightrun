@@ -1,10 +1,11 @@
-import Sprite from './Sprite.js';
+import Sprite from './Sprite';
 
 
 class Monster extends Sprite {
     constructor(phaser, name, monsterOptions) {
         monsterOptions.physics = true;
-        super(phaser, name, {frameWidth: 16, frameHeight: 16}, monsterOptions);
+        super(phaser, name, { frameWidth: 16, frameHeight: 16 },
+            monsterOptions);
     }
 
     damage(damage) {
@@ -37,7 +38,6 @@ class Monster extends Sprite {
             this.sprite.destroy();
         }
     }
-
 }
 
 export default Monster;
