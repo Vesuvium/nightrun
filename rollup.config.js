@@ -1,4 +1,4 @@
-import analyze from 'rollup-analyzer-plugin';
+import analyze from 'rollup-plugin-analyzer';
 import buble from 'rollup-plugin-buble';
 import eslint from 'rollup-plugin-eslint';
 import resolve from 'rollup-plugin-node-resolve';
