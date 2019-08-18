@@ -1,32 +1,40 @@
 class Text {
     constructor(phaser, text, x, y, style, options) {
         this.phaser = phaser;
-        this.create(text, x, y, style, options);
+        this.text = text;
+        this.x = x;
+        this.y = y;
+        this.style = style;
+        this.options = options;
     }
 
-    create(text, x, y, style, options) {
-        this.text = this.phaser.add.text(x, y, text, style);
-        if (options) {
-            if (options.interactive) {
-                this.text.setInteractive();
+    applyOptions() {
+        if (this.options) {
+            if (this.options.interactive) {
+                this.widget.setInteractive();
             }
         }
     }
 
+    create() {
+        this.widget = this.phaser.add.text(this.x, this.y, this.text, this.style);
+        this.applyOptions();
+    }
+
     origin(x, y) {
-        this.text.setOrigin(x, y);
+        this.widget.setOrigin(x, y);
     }
 
     write(text) {
-        this.text.setText(text);
+        this.widget.setText(text);
     }
 
     event(event, f) {
-        this.text.on(event, f);
+        this.widget.on(event, f);
     }
 
     destroy() {
-        this.text.destroy();
+        this.widget.destroy();
     }
 }
 
