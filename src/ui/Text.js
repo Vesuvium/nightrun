@@ -19,6 +19,7 @@ class Text {
     create() {
         this.widget = this.phaser.add.text(this.x, this.y, this.text, this.style);
         this.applyOptions();
+        this.origin(0.5, 0.5);
     }
 
     origin(x, y) {

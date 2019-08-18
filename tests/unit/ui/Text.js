@@ -47,9 +47,11 @@ test('the create method', (ava) => {
     const phaser = ava.context.phaser;
     const text = ava.context.text;
     text.applyOptions = td.func();
+    text.origin = td.func();
     text.create();
     td.verify(phaser.add.text('x', 'y', 'text', 'style'));
     td.verify(text.applyOptions());
+    td.verify(text.origin(0.5, 0.5));
     ava.is(text.widget, phaser.add.text());
 });
 
