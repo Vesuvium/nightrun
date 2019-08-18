@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import LoadingBar from './ui/LoadingBar';
+import LoadingBar from '../ui/LoadingBar';
 
 
 class Scene extends Phaser.Scene {
