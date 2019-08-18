@@ -32,14 +32,16 @@
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-commonjs": "^9.1.5",
     "rollup-plugin-eslint": "^5.0.0",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "testdouble": "^3.12.3"
   },
   "ava": {
     "files": [
       "tests/**/*"
     ],
     "require": [
-      "esm", "./tests/unit/_setup-browser-env.js"
+      "esm",
+      "./tests/unit/_setup-browser-env.js"
     ]
   }
 }
