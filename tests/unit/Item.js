@@ -1,4 +1,5 @@
 import test from 'ava';
+import td from 'testdouble';
 
 import Item from '../../src/Item';
 
@@ -12,6 +13,22 @@ test('the Item constructor', (ava) => {
     ava.is(item.phaser, 'phaser');
     ava.is(item.name, 'name');
     ava.deepEqual(item.options, {});
+});
+
+
+test('the applyOptions method', (ava) => {
+    const item = ava.context.item;
+    ava.is(item.applyOptions(), undefined);
+});
+
+
+test('the applyOptions method with interactive enabled', (ava) => {
+    const item = ava.context.item;
+    item.options.interactive = true;
+    item.item = td.object();
+    item.applyOptions();
+    td.verify(item.item.setInteractive());
+    ava.pass();
 });
 
 

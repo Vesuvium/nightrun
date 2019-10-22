@@ -16,6 +16,14 @@ class Item {
         }
     }
 
+    applyOptions() {
+        if (this.options) {
+            if (this.options.interactive) {
+                this.item.setInteractive();
+            }
+        }
+    }
+
     creationContext() {
         /* Get the creation context of an item, that is whether it has
            physics enabled or not */
@@ -37,6 +45,7 @@ class Item {
         const context = this.creationContext();
         this.item = context.add.image(x, y, this.name);
         this.item.name = this.name;
+        this.applyOptions();
         this.setSize(width, height);
     }
 }
