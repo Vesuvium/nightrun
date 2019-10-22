@@ -41,6 +41,13 @@ class Text {
         return new Phaser.Display.Color.ValueToColor(color);
     }
 
+    brighten(rate) {
+        /* Brightens the text color */
+        const color = this.color(this.widget.style.color);
+        color.brighten(rate);
+        this.widget.setColor(color.rgba);
+    }
+
     destroy() {
         this.widget.destroy();
     }
