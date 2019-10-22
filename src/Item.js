@@ -7,9 +7,13 @@ class Item {
         this.options = options;
     }
 
-    setSpawn(x, y) {
-        /* Sets the spawn point of the item */
-        this.spawn = { x, y };
+    setSize(width, height) {
+        if (width !== null && width !== undefined) {
+            this.item.displayWidth = width;
+        }
+        if (height !== null && height !== undefined) {
+            this.item.displayHeight = height;
+        }
     }
 
     creationContext() {
@@ -28,13 +32,12 @@ class Item {
         this.phaser.load.image(this.name, `assets/${this.name}.png`);
     }
 
-    create() {
+    create(x, y, width, height) {
         /* Create the item during the create phase */
         const context = this.creationContext();
-        const x = this.spawn.x;
-        const y = this.spawn.y;
         this.item = context.add.image(x, y, this.name);
         this.item.name = this.name;
+        this.setSize(width, height);
     }
 }
 

@@ -12,11 +12,10 @@ class Sprite extends Item {
         this.phaser.load.spritesheet(this.name, asset, this.spriteOptions);
     }
 
-    create() {
+    create(x, y, width, height) {
         const context = this.creationContext();
-        const x = this.spawn.x;
-        const y = this.spawn.y;
         this.sprite = context.add.sprite(x, y, this.name);
+        this.setSize(width, height);
     }
 }
 

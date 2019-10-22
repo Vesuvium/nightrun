@@ -14,10 +14,13 @@ test('the Item constructor', (ava) => {
     ava.deepEqual(item.options, {});
 });
 
-test('the setSpawn method', (ava) => {
-    const item = ava.context.item;
-    item.setSpawn(1, 2);
-    ava.deepEqual(item.spawn, { x: 1, y: 2 });
+
+test('the setSize method', (ava) => {
+	const item = ava.context.item;
+	item.item = {displayWidth: null, displayHeight: null};
+	item.setSize(10, 20);
+	ava.is(item.item.displayWidth, 10);
+	ava.is(item.item.displayHeight, 20);
 });
 
 test('the creationContext method', (ava) => {
