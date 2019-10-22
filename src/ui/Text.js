@@ -1,3 +1,6 @@
+import Phaser from 'phaser';
+
+
 class Text {
     constructor(phaser, text, x, y, style, options) {
         this.phaser = phaser;
@@ -32,6 +35,10 @@ class Text {
 
     event(event, f) {
         this.widget.on(event, f);
+    }
+
+    color(color) {
+        return new Phaser.Display.Color.ValueToColor(color);
     }
 
     destroy() {

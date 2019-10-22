@@ -1,6 +1,7 @@
 import test from 'ava';
 import td from 'testdouble';
 
+import Phaser from 'phaser';
 import Text from '../../../src/ui/Text';
 
 
@@ -80,6 +81,13 @@ test('the event method', (ava) => {
     text.event('event', 'function');
     td.verify(text.widget.on('event', 'function'));
     ava.pass();
+});
+
+
+test('the color method', (ava) => {
+    const text = ava.context.text;
+    const result = text.color('#fff');
+    ava.deepEqual(result, Phaser.Display.Color.ValueToColor('#fff'));
 });
 
 
