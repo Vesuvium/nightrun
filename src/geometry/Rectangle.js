@@ -18,7 +18,7 @@ class Rectangle {
 
     create() {
         const graphics = this.phaser.add.graphics(this.style);
-        graphics.strokeRectShape(this.shape(x, y, width, height));
+        graphics.strokeRectShape(this.shape(this.x, this.y, this.width, this.height));
     }
 
 }
